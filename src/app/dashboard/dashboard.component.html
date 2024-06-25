@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travel Agency</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    nav {
+      background-color: #333;
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem;
+    }
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+    nav ul li {
+      margin: 0 1rem;
+    }
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+    }
+    nav .search-bar input {
+      padding: 0.5rem;
+    }
+    .hero {
+      background-image: url('https://example.com/hero-image.jpg'); /* Replace with a real image URL */
+      background-size: cover;
+      background-position: center;
+      color: #fff;
+      text-align: center;
+      padding: 5rem 1rem;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      margin: 0;
+    }
+    .hero p {
+      font-size: 1.5rem;
+    }
+    .hero .cta-button {
+      background-color: #ff6200;
+      color: #fff;
+      border: none;
+      padding: 1rem 2rem;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+    section {
+      padding: 3rem 1rem;
+      text-align: center;
+    }
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+    }
+    .destination-grid, .package-grid, .testimonial-carousel, .blog-grid, .offer-grid, .why-us-content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+    }
+    .destination-item, .package-item, .blog-item, .offer-item, .why-us-item {
+      background-color: #f9f9f9;
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      width: 300px;
+      transition: transform 0.3s;
+    }
+    .destination-item:hover, .package-item:hover, .blog-item:hover, .offer-item:hover {
+      transform: translateY(-5px);
+    }
+    img {
+      width: 100%;
+      border-radius: 8px;
+    }
+    button {
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      padding: 0.5rem 1rem;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+    footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+    footer a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 0.5rem;
+    }
+    footer .footer-contact, footer .footer-social, footer .footer-newsletter, footer .footer-legal {
+      margin: 1rem 0;
+    }
+    @media (max-width: 768px) {
+      .destination-item, .package-item, .blog-item, .offer-item, .why-us-item {
+        width: 100%;
+      }
+      nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      nav ul li {
+        margin: 0.5rem 0;
+      }
+    }
+  </style>
+</head>
+<body class="bg-dark">
+ 
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h1>Discover Your Next Adventure</h1>
+      <p>Explore the world’s most beautiful places with us.</p>
+      <button class="cta-button">Start Your Journey</button>
+    </div>
+  </section>
+
+  <!-- Featured Destinations -->
+  <section id="destinations">
+    <h2>Top Destinations</h2>
+    <div class="destination-grid">
+      <!-- Repeat this block for each destination -->
+      <div class="destination-item">
+        <img src="https://example.com/paris.jpg" alt="Paris"> <!-- Replace with a real image URL -->
+        <h3>Paris</h3>
+        <p>The city of love.</p>
+        <button>Learn More</button>
+      </div>
+      <div class="destination-item">
+        <img src="https://example.com/bali.jpg" alt="Bali"> <!-- Replace with a real image URL -->
+        <h3>Bali</h3>
+        <p>Island paradise.</p>
+        <button>Learn More</button>
+      </div>
+      <!-- Add more destinations as needed -->
+    </div>
+  </section>
+
+  <!-- Popular Packages -->
+  <section id="packages">
+    <h2>Popular Packages</h2>
+    <div class="package-grid">
+      <!-- Repeat this block for each package -->
+      <div class="package-item">
+        <img src="https://example.com/bali-package.jpg" alt="Bali Adventure"> <!-- Replace with a real image URL -->
+        <h3>Bali Adventure</h3>
+        <p>7 days in paradise.</p>
+        <button>Learn More</button>
+      </div>
+      <div class="package-item">
+        <img src="https://example.com/paris-package.jpg" alt="Paris Getaway"> <!-- Replace with a real image URL -->
+        <h3>Paris Getaway</h3>
+        <p>5 days in the city of love.</p>
+        <button>Learn More</button>
+      </div>
+      <!-- Add more packages as needed -->
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section id="testimonials">
+    <h2>What Our Customers Say</h2>
+    <div class="testimonial-carousel">
+      <!-- Repeat this block for each testimonial -->
+      <div class="testimonial-item">
+        <p>"Best trip ever! Highly recommend."</p>
+        <h4>John Doe</h4>
+      </div>
+      <div class="testimonial-item">
+        <p>"Amazing experience and fantastic service."</p>
+        <h4>Jane Smith</h4>
+      </div>
+      <!-- Add more testimonials as needed -->
+    </div>
+  </section>
+
+  <!-- Blog Section -->
+  <section id="blog">
+    <h2>From Our Blog</h2>
+    <div class="blog-grid">
+      <!-- Repeat this block for each blog post -->
+      <div class="blog-item">
+        <img src="https://example.com/blog-travel-budget.jpg" alt="10 Tips for Traveling on a Budget"> <!-- Replace with a real image URL -->
+        <h3>10 Tips for Traveling on a Budget</h3>
+        <button>Read More</button>
+      </div>
+      <div class="blog-item">
+        <img src="https://example.com/blog-beach-destinations.jpg" alt="Top 5 Beach Destinations"> <!-- Replace with a real image URL -->
+        <h3>Top 5 Beach Destinations</h3>
+        <button>Read More</button>
+      </div>
+      <!-- Add more blog posts as needed -->
+    </div>
+  </section>
+
+  <!-- Newsletter Sign-Up -->
+  <section id="newsletter">
+    <h2>Stay Updated</h2>
+    <p>Sign up for our newsletter to receive the latest travel deals, tips, and destination guides straight to your inbox.</p>
+    <form>
+      <input type="email" placeholder="Enter your email">
+      <button type="submit">Subscribe</button>
+    </form>
+  </section>
+
+  <!-- Special Offers -->
+  <section id="offers">
+    <h2>Special Offers</h2>
+    <div class="offer-grid">
+      <!-- Repeat this block for each offer -->
+      <div class="offer-item">
+        <img src="https://example.com/offer-summer-sale.jpg" alt="Summer Sale"> <!-- Replace with a real image URL -->
+        <h3>Summer Sale</h3>
+        <p>Up to 30% off selected packages.</p>
+        <button>Book Now</button>
+      </div>
+      <div class="offer-item">
+        <img src="https://example.com/offer-winter-wonderland.jpg" alt="Winter Wonderland"> <!-- Replace with a real image URL -->
+        <h3>Winter Wonderland</h3>
+        <p>15% off ski trips.</p>
+        <button>Book Now</button>
+      </div>
+      <!-- Add more offers as needed -->
+    </div>
+  </section>
+
+  <!-- Why Choose Us? -->
+  <section id="why-us">
+    <h2>Why Travel With Us?</h2>
+    <div class="why-us-content">
+      <div class="why-us-item">
+        <h3>Expertly Curated Itineraries</h3>
+        <p>Experience the best destinations with our expertly curated itineraries.</p>
+      </div>
+      <div class="why-us-item">
+        <h3>24/7 Customer Support</h3>
+        <p>We're here to help you at any time, day or night.</p>
+      </div>
+      <div class="why-us-item">
+        <h3>Best Price Guarantee</h3>
+        <p>We offer the best prices for your travels.</p>
+      </div>
+      <div class="why-us-item">
+        <h3>Eco-Friendly Travel Options</h3>
+        <p>Travel sustainably with our eco-friendly options.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div>
+      <a href="#home">Home</a>
+      <a href="#destinations">Destinations</a>
+      <a href="#packages">Packages</a>
+      <a href="#blog">Blog</a>
+      <a href="#about">About Us</a>
+      <a href="#contact">Contact Us</a>
+    </div>
+    <div class="footer-contact">
+      <p>Phone: 123-456-7890</p>
+      <p>Email: info@travelagency.com</p>
+      <p>Address: 123 Travel St, Adventure City, World</p>
+    </div>
+    <div class="footer-social">
+      <a href="#">Facebook</a>
+      <a href="#">Twitter</a>
+      <a href="#">Instagram</a>
+    </div>
+    <div class="footer-newsletter">
+      <p>Subscribe to our newsletter:</p>
+      <form>
+        <input type="email" placeholder="Enter your email">
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+    <div class="footer-legal">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Service</a>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,10 @@
+<div>
+    <label for="userid">User ID:</label>
+    <input type="text" id="userid" #userid>
+  </div>
+  <div>
+    <label for="password">Password:</label>
+    <input type="password" id="password" #password>
+  </div>
+  <button (click)="login(userid.value, password.value)">Login</button>
+  

@@ -1,0 +1,486 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* ----- Header ------*/
+header {
+  height: 780px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("https://i.pinimg.com/originals/42/75/95/4275953c7514b80e74babe24dd61a0eb.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; 
+  }
+
+header div {
+  padding: 25px;
+}
+
+/* Title */
+.title-logo {
+  color: #fff;
+  float: left;
+  text-transform: uppercase;
+}
+.title-logo span,
+.title-logo--footer span {
+  margin: 0 5px;
+  color: #e5d077;
+  transition: transform 0.25s;
+}
+
+/* Menu right side */
+.main-nav {
+  float: right;
+}
+.main-nav__list {
+  list-style: none;
+}
+
+.main-nav__item {
+  display: inline-block;
+  margin: 0 7px;
+}
+
+.main-nav__item a:link,
+.main-nav__item a:visited {
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 7px 0;
+  border-bottom: 2px solid transparent;
+  transition: border-bottom 0.25s;
+}
+
+.main-nav__item a:hover,
+.main-nav__item a:active {
+  border-bottom: 2px solid #e39a94;
+}
+
+/* Background Image with big Text */
+.heading00 {
+  font-family: 'Shadows Into Light';
+  margin-top: 6%;
+  text-align: center;
+  color: #eeeded;
+  font-size: 550%;
+   word-spacing: 5px;
+}
+
+.heading01 {
+  font-family: 'Shadows Into Light';
+  margin-top: 0%;
+  text-align: center;
+  text-decoration: line-through;
+  color: #eeeded;
+  font-size: 650%;
+  letter-spacing: 5px
+}
+
+.heading02 {
+  margin-top: 0%;
+  text-align: center;
+  text-transform: uppercase;
+  color: #e5d077;
+  font-size: 650%;
+}
+
+/* The Body */
+html,
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  scroll-behavior: smooth;
+  background-color: #f9f0d4;
+  position: relative;
+  }
+
+/* ----Utilities----- */
+.clear::after {
+  content: "";
+  display: table;
+  clear: both;
+  height: 0;
+}
+
+/* Reuseable code */
+
+.container,
+.image-box {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.section-heading {
+  color: rgb(14, 14, 14);
+  text-align: center;
+  font-size: 250%;
+  font-weight: 200;
+  margin: 4% 0 5% 0;
+}
+
+.section-heading span {
+  margin: 0 5px;
+  color: #e39a94;
+  transition: transform 0.3s;
+}
+
+.section-heading::after {
+  content: "";
+  display: block;
+  margin: 30px auto 0 auto;
+  height: 2px;
+  width: 100px;
+  background-color: #e39a94;
+}
+
+.country-box {
+  width: 18%;
+  height: 350px;
+  float: left;
+  overflow: hidden;
+  margin: 0 1%;
+  border-radius: 9px;
+  box-shadow: 0 0 10px 2px #a3a3a3;
+  background-color: #000;
+  position: sticky;
+}
+
+.why-box {
+  width: 23%;
+  height: 300px;
+  float: left;
+  overflow: hidden;
+  margin: 0 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px 2px #a3a3a3;
+  background-color: #000;
+  position: relative;
+}
+
+.country-box:hover {
+  box-shadow: 0 0 10px 1px #e39a94;
+  cursor: pointer;
+}
+
+.country-box:hover .country-box__img {
+  opacity: 0.4;
+  box-align: center;
+  transform: scale(1.5);
+}
+
+.country-box:hover .country-box__title,
+.country-box:hover .country-box__catagory {
+  opacity: 1;
+}
+
+.country-box__img {
+  width: 100%;
+  height: 100%;
+  transition: opacity 0.35s, transform 0.35s;
+}
+
+.country-box__title {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: 300;
+  color: #e39a94;
+}
+
+.country-box__catagory {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background-color: #aaaaaa;
+  color: #1d1d1d;
+}
+
+.country-box__title,
+.country-box__catagory {
+  font-size: 90%;
+  padding: 3px 4px;
+  border-radius: 5px;
+  opacity: 0;
+  transition: opacity 0.35s;
+}
+
+/* Why .country-box */
+.why-box:hover {
+  box-shadow: 0 0 10px 1px #e39a94;
+  cursor: pointer;
+}
+
+.why-box:hover .why-box__img {
+  opacity: 0.4;
+  transform: scale(1.05);
+}
+
+.why-box:hover .why-box__title,
+.why-box:hover .why-box__catagory {
+  opacity: 1;
+}
+
+.why-box__img {
+  width: 100%;
+  height: 100%;
+  transition: opacity 0.35s, transform 0.35s;
+}
+
+.why-box__title {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: 300;
+  color: #e39a94;
+}
+
+.why-box__catagory {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #aaaaaa;
+  color: #1d1d1d;
+  text-align: center;
+}
+
+.why-box__title,
+.why-box__catagory {
+  font-size: 50px;
+  padding: 3px 4px;
+  border-radius: 5px;
+  opacity: 0;
+  transition: opacity 0.35s;
+}
+
+/* Destination Part */
+.destinations-box {
+  width: 50%;
+  overflow: hidden;
+  display: block;
+  height: 50%;
+  border-radius: 3px;
+  box-shadow: 0 0 20px 5px #a3a3a3;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #000000;
+
+
+  
+}
+
+.destinations-box:hover {
+  box-shadow: 0 0 10px 1px #e39a94;
+  cursor: pointer;
+}
+
+.destinations-box:hover .destinations-box__img {
+  opacity: 0.4;
+  transform: scale(1.05);
+}
+
+.destinations-box:hover .destinations-box__title,
+.destinations-box:hover .destinations-box__catagory {
+  opacity: 1;
+}
+
+.destinations-box__img {
+  width: 100%;
+  height: 80%;
+  transition: opacity 0.35s, transform 0.35s;
+}
+
+.destinations-box__title {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: 300;
+  color: #e39a94;
+}
+
+.destinations-box__catagory {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background-color: #aaaaaa;
+  color: #1d1d1d;
+}
+
+.destinations-box__title,
+.destinations-box__catagory {
+  font-size: 90%;
+  padding: 3px 4px;
+  border-radius: 5px;
+  opacity: 0;
+  transition: opacity 0.35s;
+}
+.destinations-bar{
+height: 800px;
+width: 50%;
+}
+
+
+
+
+
+/* Menu */
+/* Search Bar */
+.search-bar {
+  background-color: #faf6ea;
+}
+
+/*Why we travel Section */
+._why-bar {
+  background-color: #f3e3d6;
+}
+
+.search-bar, ._why-bar {
+  height: 100vh;
+  padding: 40px 0 60px 0;
+}
+
+/* footer */
+footer {
+  width: 100%;
+  padding: 25px 0 10px 0;
+  background-color: rgb(19, 19, 19);
+  color: #fff;
+}
+
+.title-logo--footer {
+  float: right;
+  margin-left: 25px;
+  text-transform: uppercase;
+}
+
+.footer-nav {
+  float: left;
+  margin-right: 25px;
+}
+
+.footer-nav__list {
+  list-style: none;
+}
+.footer-nav__item {
+  display: inline-block;
+  margin: 0 5px;
+}
+
+.footer-nav__item a:link,
+.footer-nav__item a:visited {
+  text-decoration: none;
+  color: #fff;
+  transition: opacity 0.25s;
+  text-transform: uppercase;
+}
+
+.footer-nav__item a:hover,
+.footer-nav__item a:active {
+  opacity: 0.75;
+}
+
+.copy-rights,
+.contactus-bar {
+  font-size: 80%;
+  font-weight: 200;
+}
+
+.copy-rights {
+  text-align: center;
+  margin-top: 25px;
+}
+
+.contactus-bar {
+  width: 100%;
+  margin-top: 30px;
+  text-align: center;
+}
+
+.contactus-bar__list {
+  list-style: none;
+}
+
+
+
+/* Travel Info popup */
+.travel-info {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75));
+  z-index: 9999;
+}
+
+.travel-info__close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.travel-info__close::after {
+  content: "\00d7";
+  display: block;
+  width: 100%;
+  height: 100%;
+  color: #e39a94;
+  font-size: 160%;
+  cursor: pointer;
+}
+
+.displayed {
+  display: block;
+}
+
+.travelInfocontainer {
+  width: 80%;
+  height: 80%;
+  margin: 5% auto;
+  overflow: hidden;
+  background-color: rgba(24, 24, 24, 0.9);
+  border-radius: 5px;
+}
+
+.travel-info__img {
+  float: left;
+  width: 50%;
+  height: 100%;
+}
+
+.travel-info__text {
+  float: right;
+  width: 50%;
+  height: 100%;
+  color: #fff;
+  padding: 20px;
+  font-size: 90%;
+  line-height: 1.4;
+  overflow: hidden;
+}
+
+/* Rating Part */
+
+.stars-container {
+  position: absolute;
+  bottom: 2%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30%;
+  text-align: center;
+}
+
+.rate-star {
+  width: 10%;
+  margin: 0 5px;
+}
